@@ -1,47 +1,48 @@
 <!doctype html>
 <html class="no-js">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Client</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/css/main.css">
-        <!-- endbuild -->
-        <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
-        <!-- endbuild -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Github Public Commit Check and Reminder</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+      <!-- build:css(.tmp) styles/main.css -->
+      <link rel="stylesheet" href="styles/css/main.css">
+      <!-- endbuild -->
+      <!-- build:js scripts/vendor/modernizr.js -->
+      <script src="bower_components/modernizr/modernizr.js"></script>
+      <!-- endbuild -->
     </head>
     <body>
 
-        <div id="page"></div>
+      <div id="page"></div>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+      <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+      </script>
 
-        <!-- build:js scripts/vendor.js -->
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/lodash/dist/lodash.compat.js"></script>
-        <script src="bower_components/backbone/backbone.js"></script>
-        <!-- endbuild -->
+      <!-- build:js scripts/vendor.js -->
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+      <script src="bower_components/backbone/backbone.js"></script>
+      <script src="bower_components/foundation/js/foundation.js"></script>
+      <!-- endbuild -->
 
-        <!-- build:js(client/app) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <script src="scripts/templates.js"></script>
-        <script src="scripts/models/commits.js"></script>
-        <script src="scripts/collections/commits.js"></script>
-        <script src="scripts/views/login.js"></script>
-        <script src="scripts/routes/router.js"></script>
-        <script src="scripts/views/schedule.js"></script>
-        <!-- endbuild -->
+      <!-- build:js(client/app) scripts/main.js -->
+      <script src="scripts/main.js"></script>
+      <script src="scripts/templates.js"></script>
+      <script src="scripts/models/commits.js"></script>
+      <script src="scripts/collections/commits.js"></script>
+      <script src="scripts/views/login.js"></script>
+      <script src="scripts/routes/router.js"></script>
+      <script src="scripts/views/schedule.js"></script>
+      <!-- endbuild -->
     </body>
 </html>

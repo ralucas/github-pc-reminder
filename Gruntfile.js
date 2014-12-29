@@ -138,8 +138,7 @@ module.exports = function (grunt) {
             PORT: '3000'
           },
           ignore: [''],
-          ext: 'js, jade, html',
-          watch: ['bin']
+          ext: 'js, jade, html'
         }
       }
     },
