@@ -16,7 +16,7 @@ Client.Views = Client.Views || {};
     className: '',
 
     events: {
-      'click .login-btn': 'login'
+      // 'click .login-btn': 'login'
     },
 
     render: function () {
@@ -25,6 +25,7 @@ Client.Views = Client.Views || {};
 
     login: function() {
       console.log('login button clicked');
+      $.get('/auth/github');
     }
 
   });

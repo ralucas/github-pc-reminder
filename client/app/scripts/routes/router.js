@@ -7,6 +7,18 @@ Client.Routers = Client.Routers || {};
 
     Client.Routers.Router = Backbone.Router.extend({
 
+      routes: {
+        "schedule": "schedule"
+      },
+
+      schedule: function() {
+        console.log('schedule');
+        var scheduleView = new Client.Views.Schedule();
+        scheduleView.render();
+      }
+
     });
+
+
 
 })();
