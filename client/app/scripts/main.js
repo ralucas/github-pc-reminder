@@ -7,8 +7,11 @@ window.Client = {
     Views: {},
     Routers: {},
     init: function () {
-        'use strict';
-        console.log('Hello from Backbone!');
+      'use strict';
+      console.log('Hello from Backbone!');
+      var loginView = new this.Views.Login();
+      loginView.render();
+      $('#page').append(loginView.$el);
     }
 };
 

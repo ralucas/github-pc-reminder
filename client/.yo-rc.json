@@ -8,6 +8,5 @@
     "compassBootstrap": false,
     "includeRequireJS": false
   },
-  "generator-mocha": {},
-  "generator-zf5": {}
+  "generator-mocha": {}
 }

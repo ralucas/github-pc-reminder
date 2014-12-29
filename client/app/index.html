@@ -8,31 +8,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/css/main.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
     </head>
     <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-            <li>jQuery</li>
-            <li>Backbone.js</li>
-            <li>Underscore.js</li>
-            <li>Modernizr</li>
-
-          </ul>
-        </div>
-
+        <div id="page"></div>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -50,9 +34,14 @@
         <script src="bower_components/backbone/backbone.js"></script>
         <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/main.js -->
+        <!-- build:js(client/app) scripts/main.js -->
         <script src="scripts/main.js"></script>
         <script src="scripts/templates.js"></script>
+        <script src="scripts/models/commits.js"></script>
+        <script src="scripts/collections/commits.js"></script>
+        <script src="scripts/views/login.js"></script>
+        <script src="scripts/routes/router.js"></script>
+        <script src="scripts/views/schedule.js"></script>
         <!-- endbuild -->
-</body>
+    </body>
 </html>
