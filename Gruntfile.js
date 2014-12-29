@@ -24,9 +24,11 @@ module.exports = function (grunt) {
     client: clientConfig,
 
     bump: {
-      createTag: true,
-      push: true,
-      pushTo: 'origin'
+      options: {
+        createTag: true,
+        push: true,
+        pushTo: 'origin'
+      }
     },
 
     mochaTest: {
