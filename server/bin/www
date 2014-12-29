@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 var debug = require('debug')('github-pc-reminder');
 var app = require('../app');
+var dotenv = require('dotenv');
+dotenv.load();
 
 app.set('port', process.env.PORT || 3010);
 
