@@ -1,7 +1,7 @@
 node_modules
 dist
-test/temp
+client/test/temp
 .sass-cache
-app/bower_components
+client/app/bower_components
 .tmp
-test/bower_components/
+client/test/bower_components/

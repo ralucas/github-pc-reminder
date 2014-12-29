@@ -46,7 +46,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //app.use(require('node-compass')({mode: 'expanded'}));
-app.use(express.static(path.join(__dirname, '../client/app')));
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.use('/', routes);
 app.use('/users', users);
