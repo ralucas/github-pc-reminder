@@ -26,7 +26,7 @@ module.exports = function (grunt) {
     bump: {
       createTag: true,
       push: true,
-      pushTo: 'upstream'
+      pushTo: 'origin'
     },
 
     mochaTest: {
