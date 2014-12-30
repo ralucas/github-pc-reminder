@@ -233,16 +233,16 @@ module.exports = function (grunt) {
       }
     },
 
-    imagemin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= client.app %>/images',
-          src: '{,*/}*.{png,jpg,jpeg}',
-          dest: '<%= client.dist %>/images'
-        }]
-      }
-    },
+    // imagemin: {
+    //   dist: {
+    //     files: [{
+    //       expand: true,
+    //       cwd: '<%= client.app %>/images',
+    //       src: '{,*/}*.{png,jpg,jpeg}',
+    //       dest: '<%= client.dist %>/images'
+    //     }]
+    //   }
+    // },
 
     cssmin: {
       dist: {
