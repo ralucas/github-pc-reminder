@@ -385,6 +385,21 @@ module.exports = function (grunt) {
       'jst',
       'useminPrepare',
       'htmlmin',
+      'imagemin',
+      'concat',
+      'cssmin',
+      'uglify',
+      'copy',
+      'rev',
+      'usemin'
+  ]);
+
+  grunt.registerTask('heroku', [
+      'clean:dist',
+      'createDefaultTemplate',
+      'jst',
+      'useminPrepare',
+      'htmlmin',
       'concat',
       'cssmin',
       'uglify',
