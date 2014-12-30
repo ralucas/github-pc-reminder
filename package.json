@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./server/bin/www",
     "test": "./node_modules/mocha/bin/mocha test",
-    "postinstall": "./node_modules/.bin/grunt build"
+    "postinstall": "./node_modules/.bin/bower install"
   },
   "dependencies": {
     "body-parser": "~1.8.1",
