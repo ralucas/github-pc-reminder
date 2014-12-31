@@ -50,6 +50,7 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.use('/', routes);
 app.use('/users', users);
+
 app.use('/auth', auth);
 
 // catch 404 and forward to error handler
