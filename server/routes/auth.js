@@ -1,6 +1,7 @@
 var passport = require('passport'),
     GitHubStrategy = require('passport-github').Strategy,
     express = require('express'),
+    url = require('url'),
     router = express.Router();
 
 // Passport session setup.
@@ -61,8 +62,8 @@ router.get('/github',
 router.get('/github/callback', 
   passport.authenticate('github', { failureRedirect: '/' }),
   function(req, res) {
-    console.log('cb');
-    res.redirect('#/schedule');
+    console.log(req.url, req.originalUrl, req.hostname, req.headers)
+    res.redirect('http://127.0.0.1:3000/#schedule');
   });
 
 module.exports = router;
