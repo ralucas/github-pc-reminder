@@ -1,8 +1,11 @@
+'use strict';
+
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 var bodyParser = require('body-parser');
 var passport = require('passport');
+var session = require('express-session');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -30,22 +33,25 @@ var allowCrossDomain = function(req, res, next) {
  
 app.use(allowCrossDomain);
 
-// Access Control
-app.all('/*', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next();
-});
+app.use(logger('dev'));
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(bodyParser());
+
+app.use(session({
+  name: 'userSession',
+  secret: process.env.SESSIONS_SECRET,
+  cookie: {
+    path: '/',
+    httpOnly: true,
+    secure: false,
+    maxAge: 3600000
+  }
+}))
 
 // passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
 
-//app.use(require('node-compass')({mode: 'expanded'}));
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.use('/', routes);
@@ -88,7 +94,7 @@ function ensureAuthenticated(req, res, next) {
   if ( req.isAuthenticated() ) {
     return next();
   } else {
-    res.redirect('/login');
+    res.redirect('/');
   }
 }
 

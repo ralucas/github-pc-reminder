@@ -27,7 +27,7 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: "http://127.0.0.1:3000/auth/github/callback"
+    callbackURL: 'http://127.0.0.1:3000/auth/github/callback'
   },
   function(accessToken, refreshToken, profile, done) {
     // asynchronous verification, for effect...
@@ -62,8 +62,9 @@ router.get('/github',
 router.get('/github/callback', 
   passport.authenticate('github', { failureRedirect: '/' }),
   function(req, res) {
-    console.log(req.url, req.originalUrl, req.hostname, req.headers)
-    res.redirect('http://127.0.0.1:3000/#schedule');
+    var user = req.user._json;
+    var redirectUrl = req.protocol + '://' + req.headers.host + '/#schedule';
+    res.redirect(redirectUrl);
   });
 
 module.exports = router;

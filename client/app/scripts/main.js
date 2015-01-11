@@ -15,7 +15,6 @@ window.Client = {
       $('#page').append(loginView.$el);
       var routes = new this.Routers.Router();
       Backbone.history.start();
-
     }
 };
 
