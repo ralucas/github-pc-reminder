@@ -137,7 +137,7 @@ module.exports = function (grunt) {
           env: {
             PORT: '3000'
           },
-          ignore: [''],
+          ignore: ['node_modules/*'],
           ext: 'js, jade, html'
         }
       }
