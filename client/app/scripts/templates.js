@@ -14,7 +14,7 @@ this["JST"]["client/app/scripts/templates/schedule.ejs"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<p>Schedule Page</p>\n\n<div class="icon-bar five-up">\n  <a class="item">\n    <i class="fi-home"></i>\n    <label>Home</label>\n  </a>\n  <a class="item">\n    <i class="fi-bookmark"></i>\n    <label>Bookmark</label>\n  </a>\n  <a class="item">\n    <i class="fi-info"></i>\n    <label>Info</label>\n  </a>\n  <a class="item">\n    <i class="fi-mail"></i>\n    <label>Mail</label>\n  </a>\n  <a class="item">\n    <i class="fi-like"></i>\n    <label>Like</label>\n  </a>\n</div>';
+__p += '<nav class="top-bar" data-topbar role="navigation">\n  <ul class="title-area">\n    <li class="name">\n      <h1><a href="#">Schedule</a></h1>\n    </li>\n     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->\n    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>\n  </ul>\n\n  <section class="top-bar-section">\n    <!-- Right Nav Section -->\n    <ul class="right">\n      <li class="active"><a href="#">Right Button Active</a></li>\n      <li class="has-dropdown">\n        <a href="#">Right Button Dropdown</a>\n        <ul class="dropdown">\n          <li><a href="#">First link in dropdown</a></li>\n          <li class="active"><a href="#">Active link in dropdown</a></li>\n        </ul>\n      </li>\n    </ul>\n\n    <!-- Left Nav Section -->\n    <ul class="left">\n      <li><a href="#">Left Nav Button</a></li>\n    </ul>\n  </section>\n</nav>\n';
 
 }
 return __p
